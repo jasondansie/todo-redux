@@ -17,6 +17,16 @@ function App() {
     inputText = e.target.value;
   }
 
+  const displayTodoText = () => {
+
+    return todoArray.map((item) => (
+    <Todo 
+      todoText={item}
+    />
+    ))
+    
+  }
+
   return (
     <main className="App">
       <div className='addTodo'>
@@ -27,9 +37,12 @@ function App() {
         <button onClick={buttonHandler}>Add ToDo</button>
       </div>
       <div className='displayTodo'>
-        <h1>the array: </h1>
-        <Todo />
-        {todoArray}
+        <h1>My ToDo List: </h1>
+        
+        <div className="todos">
+          {displayTodoText()}
+        </div>
+        
 
       </div>
     </main>
