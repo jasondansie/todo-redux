@@ -1,9 +1,10 @@
 import React from 'react';
+import classes from './Todo.module.css'
 
-const Todo = () => {
+const Todo = ({ todoText }) => {
     return (
-        <div>
-
+        <div className={classes.todo}>
+            <h2>{todoText}</h2>
         </div>
     );
 };
